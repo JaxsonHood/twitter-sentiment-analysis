@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 from twit import Twit
@@ -19,39 +19,30 @@ twit_analyzer = Twit()
 storage = Storage()
 
 # sanity check route
-@app.route('/donald', methods=['GET'])
-def don():
-    q = 'Donald Trump'
-    size = 25
+@app.route('/analyse', methods=['POST'])
+def analyse():
+    data = request.get_json()
+    q = data['query']
+    size = 100
     
-    data = handle_query(q, size)
-    return jsonify(storage.string_pretty(data))
+    return handle_query(q, size)
 
-@app.route('/joe', methods=['GET'])
-def joe():
-    q = 'Joe Biden'
-    size = 25
-    
-    data = handle_query(q, size)
-    return jsonify(storage.string_pretty(data))
 
-@app.route('/elon', methods=['GET'])
-def elon():
-    q = 'Elon Musk'
-    size = 25
-    
-    data = handle_query(q, size)
-    return jsonify(storage.string_pretty(data))
+@app.route('/saved', methods=['GET'])
+def saved():
+    return storage.read_saved()
 
-def handle_query(q, size):
+def handle_query(q, sample_size):
     # DO ANALYSIS
-    tweets, avg_polarity, avg_rounded_polarity = twit_analyzer.get_tweets(query=q, count=size)
+    tweets, avg_polarity, avg_rounded_polarity, actual_size = twit_analyzer.get_tweets(query=q, count=sample_size)
     
-    # SAVE IT ALL
-    data = storage.format_json(tweets, avg_polarity, avg_rounded_polarity, q, size)
-    storage.save_run(data)
-    
-    return data
+    if (actual_size < 1):
+        return {'data': []}
+    else:
+        # SAVE IT ALL
+        data = storage.format_json(tweets, avg_polarity, avg_rounded_polarity, q, actual_size)
+        storage.save_run(data)
+        return jsonify(storage.string_pretty(data))
     
 
 

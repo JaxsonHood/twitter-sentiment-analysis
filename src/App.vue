@@ -1,254 +1,121 @@
 <template>
-  <div>
-    <nav class="bg-gray-800">
-      <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">
-          <div class="flex items-center">
-            <div class="flex-shrink-0">
-              <img
-                class="w-8 h-8"
-                src="/img/logos/workflow-mark-on-dark.svg"
-                alt="Workflow logo"
-              />
-            </div>
-            <div class="hidden md:block">
-              <div class="flex items-baseline ml-10">
-                <router-link
-                  v-for="(link, i) in links"
-                  :key="i"
-                  :to="link.to"
-                  custom
-                  v-slot="{ navigate, href, isExactActive }"
-                >
-                  <a
-                    :href="href"
-                    @click="navigate"
-                    class="px-3 py-2 text-sm font-medium rounded-md"
-                    :class="[
-                      isExactActive
-                        ? 'text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700'
-                        : 'text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700',
-                      i > 0 && 'ml-4',
-                    ]"
-                    >{{ link.text }}</a
-                  >
-                </router-link>
+  <div class="w-screen h-full bg-black min-h-screen">
+      <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="max-w-2xl mx-auto sm:max-w-xl md:max-w-2xl">
+          <div class="text-center">
+            <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+              <div>
+                <p class="inline-block px-3 py-2 mb-4 text-xs font-semibold tracking-wider text-gray-300 uppercase rounded-full bg-gray-900">
+                  WELCOME TO
+                </p>
               </div>
+              <h2 class="max-w-lg mb-2 font-sans text-3xl font-bold leading-none tracking-tight text-gray-100 sm:text-4xl md:mx-auto">
+                <span class="relative inline-block">
+                  <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-gray-700 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+                    <defs>
+                      <pattern id="b039bae0-fdd5-4311-b198-8557b064fce0" x="0" y="0" width=".135" height=".30">
+                        <circle cx="1" cy="1" r=".7"></circle>
+                      </pattern>
+                    </defs>
+                    <rect fill="url(#b039bae0-fdd5-4311-b198-8557b064fce0)" width="52" height="24"></rect>
+                  </svg>
+                </span>
+                Twitter Sentiment Analyser
+              </h2>
+              <p class="text-base text-gray-500 md:text-lg">
+                Type in a topic below to analyse the most recent 100 tweets about it!
+              </p>
             </div>
-          </div>
-          <div class="hidden md:block">
-            <div class="flex items-center ml-4 md:ml-6">
-              <button
-                class="p-1 text-gray-400 border-2 border-transparent rounded-full  hover:text-white focus:outline-none focus:text-white focus:bg-gray-700"
-                aria-label="Notifications"
-              >
-                <svg
-                  class="w-6 h-6"
-                  stroke="currentColor"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-                  />
-                </svg>
-              </button>
-
-              <!-- Profile dropdown -->
-              <div class="relative ml-3">
-                <div>
-                  <button
-                    class="flex items-center max-w-xs text-sm text-white rounded-full  focus:outline-none focus:shadow-solid"
-                    id="user-menu"
-                    aria-label="User menu"
-                    aria-haspopup="true"
-                    @click="showProfileMenu = !showProfileMenu"
-                  >
-                    <img
-                      class="w-8 h-8 rounded-full"
-                      src="/img/person1.jpeg"
-                      alt=""
-                    />
-                  </button>
-                </div>
-
-                <transition
-                  enter-active-class="transition duration-100 ease-out"
-                  enter-from-class="transform scale-95 opacity-0"
-                  enter-to-class="transform scale-100 opacity-100"
-                  leave-active-class="transition duration-75 ease-in"
-                  leave-from-class="transform scale-100 opacity-100"
-                  leave-to-class="transform scale-95 opacity-0"
-                >
-                  <div
-                    v-if="showProfileMenu"
-                    class="absolute right-0 w-48 mt-2 origin-top-right rounded-md shadow-lg "
-                  >
-                    <div
-                      class="py-1 bg-white rounded-md  ring-1 ring-black ring-opacity-5"
-                      role="menu"
-                      aria-orientation="vertical"
-                      aria-labelledby="user-menu"
-                    >
-                      <a
-                        href="#"
-                        class="block px-4 py-2 text-sm text-gray-700  hover:bg-gray-100"
-                        role="menuitem"
-                        >Your Profile</a
-                      >
-                      <a
-                        href="#"
-                        class="block px-4 py-2 text-sm text-gray-700  hover:bg-gray-100"
-                        role="menuitem"
-                        >Settings</a
-                      >
-                      <a
-                        href="#"
-                        class="block px-4 py-2 text-sm text-gray-700  hover:bg-gray-100"
-                        role="menuitem"
-                        >Sign out</a
-                      >
-                    </div>
-                  </div>
-                </transition>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex -mr-2 md:hidden">
-            <!-- Mobile menu button -->
-            <button
-              class="inline-flex items-center justify-center p-2 text-gray-400 rounded-md  hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white"
-              @click="showMenu = !showMenu"
-            >
-              <!-- Menu open: "hidden", Menu closed: "block" -->
-              <svg
-                class="block w-6 h-6"
-                stroke="currentColor"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
+            <div :class="analyzing ? 'hidden' : 'p-1'">
+              <form class="flex flex-col items-center w-full mb-4 md:flex-row md:px-16" @submit.prevent="submitForm">
+                <input
+                  placeholder="(ex. Topic, Person, Recent Event)"
+                  v-model="search_query"
+                  required=""
+                  type="text"
+                  class="flex-grow w-full h-12 px-4 mb-3 transition duration-200 bg-gray-900 border focus:bg-black border-gray-300 text-white rounded-2xl shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-blue-accent-400 focus:outline-none focus:shadow-outline"
                 />
-              </svg>
-              <!-- Menu open: "block", Menu closed: "hidden" -->
-              <svg
-                class="hidden w-6 h-6"
-                stroke="currentColor"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!--
-      Mobile menu, toggle classes based on menu state.
-
-      Open: "block", closed: "hidden"
-    -->
-      <div class="md:hidden" :class="showMenu ? 'block' : 'hidden'">
-        <div class="px-2 pt-2 pb-3 sm:px-3">
-          <router-link
-            v-for="(link, i) in links"
-            :key="i"
-            :to="link.to"
-            custom
-            v-slot="{ navigate, href, isExactActive }"
-          >
-            <a
-              :href="href"
-              @click="navigate().then(() => (showMenu = false))"
-              class="block px-3 py-2 text-base font-medium rounded-md"
-              :class="[
-                isExactActive
-                  ? 'text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700'
-                  : 'text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700',
-                i > 0 && 'mt-1',
-              ]"
-              >{{ link.text }}</a
-            >
-          </router-link>
-        </div>
-        <div class="pt-4 pb-3 border-t border-gray-700">
-          <div class="flex items-center px-5">
-            <div class="flex-shrink-0">
-              <img
-                class="w-10 h-10 rounded-full"
-                src="/img/person1.jpeg"
-                alt=""
-              />
+                <button
+                  type="submit"
+                  class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded-2xl shadow-md md:w-auto bg-green-accent-700 hover:border-light-green-accent-700 focus:shadow-outline focus:outline-none"
+                >
+                  Run
+                </button>
+              </form>
+              <p class="max-w-md mx-auto mb-10 text-xs text-gray-600 sm:text-sm md:mb-16">
+                Review previous analysis below!!
+              </p>
             </div>
-            <div class="ml-3">
-              <div class="text-base font-medium leading-none text-white">
-                Tom Cook
-              </div>
-              <div class="mt-1 text-sm font-medium leading-none text-gray-400">
-                tom@example.com
-              </div>
+            <div :class="analyzing ? 'p-1' : 'hidden'">
+              <img class="object-contain h-60 w-full" src='/img/loading.gif' />
+              <div class="text-gray-500 font-mono text-2xl transform transition-all animate-pulse">Running Analysis...</div>
+            </div>
+            <div :class="analyzing ? 'hidden' : 'p-1'">
+              <div class="text-white p-5">RESULTS: {{ result }}</div>
+              <ul id="saved_items" class="text-gray-100 p-4">
+                <li v-for="item in saved" :key="item.timestamp" class="p-1">
+                  {{ item.query }}, {{ item.size }}, {{ item.avg_polarity }}, {{ item.avg_rounded_polarity }}, {{ item.timestamp }}
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="px-2 mt-3">
-            <a
-              href="#"
-              class="block px-3 py-2 text-base font-medium text-gray-400 rounded-md  hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
-              >Your Profile</a
-            >
-            <a
-              href="#"
-              class="block px-3 py-2 mt-1 text-base font-medium text-gray-400 rounded-md  hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
-              >Settings</a
-            >
-            <a
-              href="#"
-              class="block px-3 py-2 mt-1 text-base font-medium text-gray-400 rounded-md  hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
-              >Sign out</a
-            >
-          </div>
         </div>
       </div>
-    </nav>
-
-    <header class="bg-white shadow" v-if="$route.meta.title">
-      <div class="max-w-screen-xl px-4 py-6 mx-auto sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold leading-tight text-gray-900">
-          {{ $route.meta.title }}
-        </h1>
-      </div>
-    </header>
-
-    <div class="max-w-screen-xl py-6 mx-auto sm:px-6 lg:px-8">
-      <router-view />
-    </div>
   </div>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
 
 export default defineComponent({
   data: () => ({
-    showMenu: false,
-    showProfileMenu: false,
-    links: [
-      { text: 'Home', to: '/' },
-      { text: 'About', to: '/about' },
-    ],
+    base_url: 'http://localhost:5000',
+    search_query: '',
+    result: {},
+    analyzing: false,
+    saved: []
   }),
-})
+  created: async function() {
+      const path = this.base_url + '/saved'
+
+      const res = await fetch(path, {method: 'GET',});
+      const data = await res.json()
+
+      this.saved = data.data.reverse()
+  },
+  methods: {
+    // submit the form to our backend api
+    async submitForm() {
+      const path = this.base_url + '/analyse'
+
+      this.analyzing = true
+
+      const res = await fetch(path, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          query: this.search_query,
+        }) 
+      });
+
+      const data = await res.json()
+      this.result = data
+      this.loadData()
+
+      setTimeout(() => {
+        this.search_query = ''
+        this.analyzing = false
+      }, 2000);
+    },
+    async loadData() {
+      const path = this.base_url + '/saved'
+
+      const res = await fetch(path, {method: 'GET',});
+      const data = await res.json()
+
+      this.saved = data.data.reverse()
+      console.log("Reloaded Data")
+    }
+  }
+});
 </script>
