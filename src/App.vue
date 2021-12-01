@@ -1,8 +1,8 @@
 <template>
   <div class="w-screen h-full bg-black min-h-screen">
       <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div class="max-w-2xl mx-auto sm:max-w-xl md:max-w-2xl">
-          <div class="text-center">
+        <div class="max-w-2xl mx-auto sm:max-w-xl md:max-w-3xl">
+          <div class="grid place-items-center h-full">
             <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
               <div>
                 <p class="inline-block px-3 py-2 mb-4 text-xs font-semibold tracking-wider text-gray-300 uppercase rounded-full bg-gray-900">
@@ -26,7 +26,7 @@
                 Type in a topic below to analyse the most recent 100 tweets about it!
               </p>
             </div>
-            <div :class="analyzing ? 'hidden' : 'p-1'">
+            <div :class="analyzing ? 'hidden' : 'p-1 w-full max-w-xl text-center'">
               <form class="flex flex-col items-center w-full mb-4 md:flex-row md:px-16" @submit.prevent="submitForm">
                 <input
                   placeholder="(ex. Topic, Person, Recent Event)"
@@ -53,7 +53,7 @@
             <div :class="analyzing ? 'hidden' : 'p-1'">
               <div class="text-white p-5">RESULTS: {{ result }}</div>
               <ul id="saved_items" class="text-gray-100 p-4">
-                <li v-for="item in saved" :key="item.timestamp" class="p-1">
+                <li v-for="item in saved" :key="item.timestamp" class="p-2">
                   {{ item.query }}, {{ item.size }}, {{ item.avg_polarity }}, {{ item.avg_rounded_polarity }}, {{ item.timestamp }}
                 </li>
               </ul>
