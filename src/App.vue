@@ -46,15 +46,59 @@
                 Review previous analysis below!!
               </p>
             </div>
-            <div :class="analyzing ? 'p-1' : 'hidden'">
+            <div :class="analyzing ? 'p-1 text-center w-full' : 'hidden'">
               <img class="object-contain h-60 w-full" src='/img/loading.gif' />
               <div class="text-gray-500 font-mono text-2xl transform transition-all animate-pulse">Running Analysis...</div>
             </div>
-            <div :class="analyzing ? 'hidden' : 'p-1'">
-              <div class="text-white p-5">RESULTS: {{ result }}</div>
+            <div :class="analyzing ? 'hidden' : 'p-1 w-full max-w-xl overflow-y-scroll'">
+              <div v-if="result != null" class="p-4 pb-0 text-3xl text-gray-400 font-extrabold">Result:</div>
+              <div v-if="result != null" class="p-5">
+                <div class="p-4 pl-5 pr-5 text-gray-400 w-full bg-gray-900 bg-opacity-30 rounded-3xl border-2 border-gray-900 transform transition-all hover:scale-105 cursor-pointer hover:border-gray-600">
+                    <div class="grid grid-cols-2 gap-4">
+                      <h3>Query: <span class="font-extrabold ">{{result.query}}</span></h3>
+                      <div class="text-right text-gray-600"><h4>{{result.timestamp}}</h4></div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 pt-2">
+                      <div class="pt-2 grid grid-cols-1 text-center text-sm">
+                        <h1 class="text-gray-500 font-extrabold text-xs">Sample Size</h1>
+                        <h1 class="font-extrabold text-2xl">{{result.size}}</h1>
+                      </div>
+                      <div class="pt-2 grid grid-cols-1 text-center text-sm">
+                        <h1 class="text-gray-500 font-extrabold text-xs">Avg. Polarity</h1>
+                        <h1 :class="result.avg_polarity.toFixed(3) == 0 ? 'font-extrabold text-2xl text-gray-500' : result.avg_polarity > 0.1 ? 'font-extrabold text-2xl text-green-accent-700' : result.avg_polarity > 0 ? 'font-extrabold text-2xl text-yellow-accent-700': 'font-extrabold text-2xl text-red-accent-700'">{{result.avg_polarity.toFixed(3)}}</h1>
+                      </div>
+                      <div class="pt-2 grid grid-cols-1 text-center text-sm">
+                        <h1 class="text-gray-500 font-extrabold text-xs">Avg. Rounded Polarity</h1>
+                        <h1 class="font-extrabold text-2xl">{{result.avg_rounded_polarity.toFixed(2)}}</h1>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="w-full border-2 rounded-xl m-4 border-gray-900"></div>
+              <div class="p-4 pb-0 text-3xl text-gray-600 font-extrabold">Past Results:</div>
               <ul id="saved_items" class="text-gray-100 p-4">
                 <li v-for="item in saved" :key="item.timestamp" class="p-2">
-                  {{ item.query }}, {{ item.size }}, {{ item.avg_polarity }}, {{ item.avg_rounded_polarity }}, {{ item.timestamp }}
+                  <div class="p-4 pl-5 pr-5 text-gray-400 w-full bg-gray-900 bg-opacity-30 rounded-3xl border-2 border-gray-900 transform transition-all hover:scale-105 cursor-pointer hover:border-gray-600">
+                    <div class="grid grid-cols-2 gap-4">
+                      <h3>Query: <span class="font-extrabold ">{{item.query}}</span></h3>
+                      <div class="text-right text-gray-600"><h4>{{item.timestamp}}</h4></div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4 pt-2">
+                      <div class="pt-2 grid grid-cols-1 text-center text-sm">
+                        <h1 class="text-gray-500 font-extrabold text-xs">Sample Size</h1>
+                        <h1 class="font-extrabold text-2xl">{{item.size}}</h1>
+                      </div>
+                      <div class="pt-2 grid grid-cols-1 text-center text-sm">
+                        <h1 class="text-gray-500 font-extrabold text-xs">Avg. Polarity</h1>
+                        <h1 :class="item.avg_polarity.toFixed(3) == 0 ? 'font-extrabold text-2xl text-gray-500' : item.avg_polarity > 0.1 ? 'font-extrabold text-2xl text-green-accent-700' : item.avg_polarity > 0 ? 'font-extrabold text-2xl text-yellow-accent-700': 'font-extrabold text-2xl text-red-accent-700'">{{item.avg_polarity.toFixed(3)}}</h1>
+                      </div>
+                      <div class="pt-2 grid grid-cols-1 text-center text-sm">
+                        <h1 class="text-gray-500 font-extrabold text-xs">Avg. Rounded Polarity</h1>
+                        <h1 class="font-extrabold text-2xl">{{item.avg_rounded_polarity.toFixed(2)}}</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- {{ item.query }}, {{ item.size }}, {{ item.avg_polarity }}, {{ item.avg_rounded_polarity }}, {{ item.timestamp }} -->
                 </li>
               </ul>
             </div>
@@ -71,7 +115,7 @@ export default defineComponent({
   data: () => ({
     base_url: 'http://localhost:5000',
     search_query: '',
-    result: {},
+    result: null,
     analyzing: false,
     saved: []
   }),
@@ -89,6 +133,7 @@ export default defineComponent({
       const path = this.base_url + '/analyse'
 
       this.analyzing = true
+      this.result = null
 
       const res = await fetch(path, {
         method: 'POST',

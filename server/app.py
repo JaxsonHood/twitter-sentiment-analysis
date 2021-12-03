@@ -42,7 +42,7 @@ def handle_query(q, sample_size):
         # SAVE IT ALL
         data = storage.format_json(tweets, avg_polarity, avg_rounded_polarity, q, actual_size)
         storage.save_run(data)
-        return jsonify(storage.string_pretty(data))
+        return data
     
 
 
