@@ -32,6 +32,12 @@ def analyse():
 def saved():
     return storage.read_saved()
 
+@app.route('/find', methods=['POST'])
+def find():
+    data = request.get_json()
+    timestamp = data['timestamp']
+    return storage.find_tweets(timestamp)
+
 def handle_query(q, sample_size):
     # DO ANALYSIS
     tweets, avg_polarity, avg_rounded_polarity, actual_size = twit_analyzer.get_tweets(query=q, count=sample_size)

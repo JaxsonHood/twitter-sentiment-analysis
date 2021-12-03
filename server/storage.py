@@ -20,6 +20,13 @@ class Storage(object):
         with open(self.filename, 'r') as openfile:
             json_object = json.load(openfile)
             return json_object
+        
+    def find_tweets(self, timestamp):
+        data = self.read_saved()
+        
+        for item in data['data']:
+            if (item['timestamp'] == timestamp):
+                return item
             
         
     def format_json(self, tweets, avg_polarity, avg_rounded_polarity, q, size):
