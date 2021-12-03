@@ -74,8 +74,8 @@
                     </div>
                   </div>
               </div>
-              <div class="w-full border-2 rounded-xl m-4 border-gray-900"></div>
-              <div class="p-4 pb-0 text-3xl text-gray-600 font-extrabold">Past Results:</div>
+              <div class="w-full border-2 rounded-xl m-4 border-gray-800"></div>
+              <div class="p-4 pb-0 text-3xl text-gray-400 font-extrabold">Past Results:</div>
               <ul id="saved_items" class="text-gray-100 p-4">
                 <li v-for="item in saved" :key="item.timestamp" class="p-2" @click="get_tweets(item.timestamp)">
                   <div class="p-4 pl-5 pr-5 text-gray-400 w-full bg-gray-900 bg-opacity-30 rounded-3xl border-2 border-gray-900 transform transition-all hover:scale-105 cursor-pointer hover:border-gray-600">
