@@ -24,9 +24,7 @@ def analyse():
     data = request.get_json()
     q = data['query']
     size = 100
-    
     return handle_query(q, size)
-
 
 @app.route('/saved', methods=['GET'])
 def saved():
@@ -40,13 +38,13 @@ def find():
 
 def handle_query(q, sample_size):
     # DO ANALYSIS
-    tweets, avg_polarity, avg_rounded_polarity, actual_size = twit_analyzer.get_tweets(query=q, count=sample_size)
+    tweets, avg_score, overall_sentiment, actual_size = twit_analyzer.get_tweets(query=q, count=sample_size)
     
     if (actual_size < 1):
         return {'data': []}
     else:
         # SAVE IT ALL
-        data = storage.format_json(tweets, avg_polarity, avg_rounded_polarity, q, actual_size)
+        data = storage.format_json(tweets, avg_score, overall_sentiment, q, actual_size)
         storage.save_run(data)
         return data
     

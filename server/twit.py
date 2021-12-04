@@ -1,6 +1,5 @@
 import re
 import tweepy
-from textblob import TextBlob
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
   
 class Twit(object):
@@ -27,32 +26,29 @@ class Twit(object):
         if num > 0: return 1
         if num < 0: return -1
         return 0
-  
-    def get_tweet_sentiment(self, tweet):
-        '''
-        Utility function to classify sentiment of passed tweet
-        using textblob's sentiment method
-        '''
-        # create TextBlob object of passed tweet text
-        analysis = TextBlob(self.clean_tweet(tweet))
-        # set sentiment
-        return analysis.sentiment.polarity
+    
+    def tweet_analysis(self, text):
+        results = self.analyzer.polarity_scores(text)
+        return results
     
     def get_results(self, tweets):
-        total_polarity = 0
-        total_polarity_rounded = 0
-        
+        compounded_score = 0
         size = len(tweets)
         
         for tweet in tweets:
-            score = tweet['sentiment_score']
-            total_polarity += score
-            total_polarity_rounded += self.rounder(score)
+            score = tweet['analysis']['compound']
+            compounded_score += score
             
-        avg_score = total_polarity / size
-        avg_rounded_score = total_polarity_rounded / size
-            
-        return tweets, avg_score, avg_rounded_score, size
+        avg_score = round((compounded_score / size), 4)
+        overall_sentiment = "neutral"
+        
+        if avg_score >= 0.05:
+            overall_sentiment = "positive"
+        if avg_score <= -0.05:
+            overall_sentiment = "negative"
+                
+        
+        return tweets, avg_score, overall_sentiment, size
             
   
     def get_tweets(self, query, count = 10):
@@ -78,7 +74,7 @@ class Twit(object):
                     # saving text of tweet
                     parsed_tweet['text'] = tweet.text
                     # saving sentiment of tweet
-                    parsed_tweet['sentiment_score'] = self.get_tweet_sentiment(tweet.text)
+                    parsed_tweet['analysis'] = self.tweet_analysis(tweet.text)
     
                     # appending parsed tweet to tweets list
                     tweets.append(parsed_tweet)

@@ -29,13 +29,13 @@ class Storage(object):
                 return item
             
         
-    def format_json(self, tweets, avg_polarity, avg_rounded_polarity, q, size):
+    def format_json(self, tweets, avg_score, overall_sentiment, q, size):
         now = datetime.today()
         
         return {
             "tweets": tweets,
-            "avg_polarity": avg_polarity,
-            "avg_rounded_polarity": avg_rounded_polarity,
+            "avg_score": avg_score,
+            "overall_sentiment": overall_sentiment,
             "query": q,
             "size": size,
             "timestamp": str(now)

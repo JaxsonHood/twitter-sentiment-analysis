@@ -64,12 +64,12 @@
                         <h1 class="font-extrabold text-2xl">{{result.size}}</h1>
                       </div>
                       <div class="pt-2 grid grid-cols-1 text-center text-sm">
-                        <h1 class="text-gray-500 font-extrabold text-xs">Avg. Polarity</h1>
-                        <h1 :class="result.avg_polarity.toFixed(3) == 0 ? 'font-extrabold text-2xl text-gray-500' : result.avg_polarity > 0.1 ? 'font-extrabold text-2xl text-green-accent-700' : result.avg_polarity > 0 ? 'font-extrabold text-2xl text-yellow-accent-700': 'font-extrabold text-2xl text-red-accent-700'">{{result.avg_polarity.toFixed(3)}}</h1>
+                        <h1 class="text-gray-500 font-extrabold text-xs">Avg. Score</h1>
+                        <h1 :class="result.overall_sentiment == 'neutral' ? 'font-extrabold text-2xl text-gray-500' : result.overall_sentiment == 'positive' ? 'font-extrabold text-2xl text-green-accent-700' : 'font-extrabold text-2xl text-red-accent-700'">{{result.avg_score.toFixed(3)}}</h1>
                       </div>
                       <div class="pt-2 grid grid-cols-1 text-center text-sm">
-                        <h1 class="text-gray-500 font-extrabold text-xs">Avg. Rounded Polarity</h1>
-                        <h1 class="font-extrabold text-2xl">{{result.avg_rounded_polarity.toFixed(2)}}</h1>
+                        <h1 class="text-gray-500 font-extrabold text-xs">Sentiment</h1>
+                        <h1 class="font-extrabold text-2xl">{{result.overall_sentiment}}</h1>
                       </div>
                     </div>
                   </div>
@@ -89,16 +89,16 @@
                         <h1 class="font-extrabold text-2xl">{{item.size}}</h1>
                       </div>
                       <div class="pt-2 grid grid-cols-1 text-center text-sm">
-                        <h1 class="text-gray-500 font-extrabold text-xs">Avg. Polarity</h1>
-                        <h1 :class="item.avg_polarity.toFixed(3) == 0 ? 'font-extrabold text-2xl text-gray-500' : item.avg_polarity > 0.1 ? 'font-extrabold text-2xl text-green-accent-700' : item.avg_polarity > 0 ? 'font-extrabold text-2xl text-yellow-accent-700': 'font-extrabold text-2xl text-red-accent-700'">{{item.avg_polarity.toFixed(3)}}</h1>
+                        <h1 class="text-gray-500 font-extrabold text-xs">Avg. Score</h1>
+                        <h1 :class="item.overall_sentiment == 'neutral' ? 'font-extrabold text-2xl text-gray-500' : item.overall_sentiment == 'positive' ? 'font-extrabold text-2xl text-green-accent-700' : 'font-extrabold text-2xl text-red-accent-700'">{{item.avg_score.toFixed(3)}}</h1>
                       </div>
                       <div class="pt-2 grid grid-cols-1 text-center text-sm">
-                        <h1 class="text-gray-500 font-extrabold text-xs">Avg. Rounded Polarity</h1>
-                        <h1 class="font-extrabold text-2xl">{{item.avg_rounded_polarity.toFixed(2)}}</h1>
+                        <h1 class="text-gray-500 font-extrabold text-xs">Sentiment</h1>
+                        <h1 class="font-extrabold text-2xl">{{item.overall_sentiment}}</h1>
                       </div>
                     </div>
                   </div>
-                  <!-- {{ item.query }}, {{ item.size }}, {{ item.avg_polarity }}, {{ item.avg_rounded_polarity }}, {{ item.timestamp }} -->
+                  <!-- {{ item.query }}, {{ item.size }}, {{ item.avg_score }}, {{ item.avg_rounded_polarity }}, {{ item.timestamp }} -->
                 </li>
               </ul>
             </div>
@@ -129,12 +129,12 @@
                     <h1 class="font-extrabold text-5xl">{{modalData.size}}</h1>
                   </div>
                   <div class="pt-2 grid grid-cols-1 text-center text-sm">
-                    <h1 class="text-gray-500 font-extrabold text-lg">Avg. Polarity</h1>
-                    <h1 :class="modalData.avg_polarity.toFixed(3) == 0 ? 'font-extrabold text-5xl text-gray-500' : modalData.avg_polarity > 0.1 ? 'font-extrabold text-5xl text-green-accent-700' : modalData.avg_polarity > 0 ? 'font-extrabold text-5xl text-yellow-accent-700': 'font-extrabold text-5xl text-red-accent-700'">{{modalData.avg_polarity.toFixed(3)}}</h1>
+                    <h1 class="text-gray-500 font-extrabold text-lg">Avg. Score</h1>
+                    <h1 :class="modalData.overall_sentiment == 'neutral' ? 'font-extrabold text-5xl text-yellow-accent-700' : modalData.overall_sentiment == 'positive' ? 'font-extrabold text-5xl text-green-accent-700' : 'font-extrabold text-5xl text-red-accent-700'">{{modalData.avg_score.toFixed(3)}}</h1>
                   </div>
                   <div class="pt-2 grid grid-cols-1 text-center text-sm">
-                    <h1 class="text-gray-500 font-extrabold text-lg">Avg. Rounded Polarity</h1>
-                    <h1 class="font-extrabold text-5xl">{{modalData.avg_rounded_polarity.toFixed(2)}}</h1>
+                    <h1 class="text-gray-500 font-extrabold text-lg">Sentiment</h1>
+                    <h1 class="font-extrabold text-5xl">{{modalData.overall_sentiment}}</h1>
                   </div>
                 </div>
                 <div class="mt-10 pl-9 pr-10 pb-3 font-extrabold text-2xl text-gray-400">Tweets:</div>
@@ -142,7 +142,7 @@
                   <div class="border-b p-4" v-for="tweet in modalData.tweets" :key="tweet.text">
                     {{tweet.text}}
                     <div class="pt-4 font-mono text-xl">Sentiment Score: 
-                      <span :class="tweet.sentiment_score == 0 ? 'font-bold' : tweet.sentiment_score > 0.1 ? 'font-bold text-green-accent-700' : tweet.sentiment_score > 0 ? 'text-yellow-accent-700 font-bold' : 'font-bold text-red-accent-700'">{{tweet.sentiment_score.toFixed(3)}}</span></div>
+                      <span :class="tweet.analysis.compound >= 0.05 ? 'font-bold text-green-accent-700' : tweet.analysis.compound <= -0.05 ? 'font-bold text-red-accent-700' : 'text-yellow-accent-700 font-bold'">{{tweet.analysis.compound.toFixed(3)}}</span></div>
                   </div>
                 </div>
             </div>
