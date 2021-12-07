@@ -9998,6 +9998,915 @@
             "query": "COVID-19",
             "size": 100,
             "timestamp": "2021-12-04 16:00:02.698117"
+        },
+        {
+            "tweets": [
+                {
+                    "text": "sei muito sobre basquete, tristan Thompson traiu a Khlo\u00e9 Kardashian\ud83d\ude06",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 0.828,
+                        "pos": 0.172,
+                        "compound": 0.3612
+                    }
+                },
+                {
+                    "text": "Poor Thang: Khlo\u00e9 Kardashian \u201cUpset\u201d To Learn Tristan Cheated AGAIN\u2026 Kardashians Rally In Support Of Both \u201cFamily\u201d Members Amid\u00a0Scandal https://t.co/TAk5tVCYwi",
+                    "analysis": {
+                        "neg": 0.321,
+                        "neu": 0.586,
+                        "pos": 0.093,
+                        "compound": -0.765
+                    }
+                },
+                {
+                    "text": "Khlo\u00e9 Kardashian Is Reportedly Changing Her Tune on Tristan Thompson After This Last Round of Cheating https://t.co/Den9LAWqnT Got To SAY W-T-F ? MSN NEWS====W-T-F.?",
+                    "analysis": {
+                        "neg": 0.147,
+                        "neu": 0.853,
+                        "pos": 0.0,
+                        "compound": -0.6072
+                    }
+                },
+                {
+                    "text": "RT @joshieyamaguchi: I love feeding &amp; spoiling niggas OMGGGG mfs gave me khloe Kardashian\u2019s prayer \ud83d\ude14\ud83d\ude4f\ud83c\udffd",
+                    "analysis": {
+                        "neg": 0.089,
+                        "neu": 0.706,
+                        "pos": 0.204,
+                        "compound": 0.4767
+                    }
+                },
+                {
+                    "text": "Tristan Thompson\u2019s Alleged Mistress Claims They Hooked Up In LA &amp; He Said He'd Leave Khlo\u00e9 -- And Reveals A Kardashian Dirty Secret! https://t.co/tD3pM4aQPn https://t.co/iSNCX81SgS",
+                    "analysis": {
+                        "neg": 0.16,
+                        "neu": 0.84,
+                        "pos": 0.0,
+                        "compound": -0.5255
+                    }
+                },
+                {
+                    "text": "RT @MasinElije: I don\u2019t feel bad for Khloe Kardashian. Once a man shows you he\u2019s not shit, BELIEVE HIM. I don\u2019t believe in 4, 5, 6 chances\u2026",
+                    "analysis": {
+                        "neg": 0.111,
+                        "neu": 0.796,
+                        "pos": 0.093,
+                        "compound": -0.1471
+                    }
+                },
+                {
+                    "text": "RT @MasinElije: I don\u2019t feel bad for Khloe Kardashian. Once a man shows you he\u2019s not shit, BELIEVE HIM. I don\u2019t believe in 4, 5, 6 chances\u2026",
+                    "analysis": {
+                        "neg": 0.111,
+                        "neu": 0.796,
+                        "pos": 0.093,
+                        "compound": -0.1471
+                    }
+                },
+                {
+                    "text": "RT @_cocolait: Khloe Kardashian doit avoir bien honte , elle qui disait que gngngn Jordyn a bris\u00e9 ma famille https://t.co/K06zZdahaN",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 1.0,
+                        "pos": 0.0,
+                        "compound": 0.0
+                    }
+                },
+                {
+                    "text": "'Ex' de Khlo\u00e9 Kardashian, Tristan Thompson, j\u00e1 foi pai pela terceira vez https://t.co/QPMIupcrKh",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 1.0,
+                        "pos": 0.0,
+                        "compound": 0.0
+                    }
+                },
+                {
+                    "text": "Tristan Thompson\u2019s Alleged Mistress Claims They Hooked Up In LA &amp; He Said He\u2019d Leave Khlo\u00e9 \u2013 And Reveals A Kardashian Dirty\u00a0Secret! https://t.co/efwPvl3hhw",
+                    "analysis": {
+                        "neg": 0.166,
+                        "neu": 0.834,
+                        "pos": 0.0,
+                        "compound": -0.5255
+                    }
+                },
+                {
+                    "text": "RT @AlexUlrichh: Khloe Kardashian: \u201ccan you please stop cheating on me and just love me and our daughter?\u201d\n\nTristan Thompson:\nhttps://t.co/\u2026",
+                    "analysis": {
+                        "neg": 0.198,
+                        "neu": 0.58,
+                        "pos": 0.222,
+                        "compound": 0.1779
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Saddened\u2019 Tristan May Have Cheated For 5 Months - https://t.co/yhlN3sCYI4 #TristanThompson #Hollywoodnews",
+                    "analysis": {
+                        "neg": 0.202,
+                        "neu": 0.798,
+                        "pos": 0.0,
+                        "compound": -0.5106
+                    }
+                },
+                {
+                    "text": "Poor Thang: Khlo\u00e9 Kardashian \u201cUpset\u201d To Learn Tristan Cheated AGAIN\u2026 Kardashians Rally In Support Of Both \u201cFamily\u201d Members Amid Scandal https://t.co/HpmpMqmRr2 https://t.co/bGrD51BKIl",
+                    "analysis": {
+                        "neg": 0.31,
+                        "neu": 0.6,
+                        "pos": 0.09,
+                        "compound": -0.765
+                    }
+                },
+                {
+                    "text": "Tristan Thompson's Alleged Mistress Claims They Hooked Up In LA &amp; He Said He'd Leave Khlo\u00e9 \u2014 And Reveals A Kardashian Dirty\u00a0Secret! https://t.co/B65vmv2Y7s",
+                    "analysis": {
+                        "neg": 0.166,
+                        "neu": 0.834,
+                        "pos": 0.0,
+                        "compound": -0.5255
+                    }
+                },
+                {
+                    "text": "Tristan Thompson's Alleged Mistress Claims They Hooked Up In LA &amp; He Said He'd Leave Khlo\u00e9 \u2014 And Reveals A Kardashian Dirty\u00a0Secret! https://t.co/YDEjxkyRkQ",
+                    "analysis": {
+                        "neg": 0.166,
+                        "neu": 0.834,
+                        "pos": 0.0,
+                        "compound": -0.5255
+                    }
+                },
+                {
+                    "text": "RT @PerezHilton: ICYMI: Khlo\u00e9 Kardashian isn't speaking out, but sources say she \"can't believe\" he did this again. https://t.co/uq84miC8f3",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 1.0,
+                        "pos": 0.0,
+                        "compound": 0.0
+                    }
+                },
+                {
+                    "text": "Scott Disick cheers up Khloe Kardashian with pink flowers amid Tristan Thompson paternity\u00a0controversy https://t.co/z3eg0ESPZQ",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 0.819,
+                        "pos": 0.181,
+                        "compound": 0.4767
+                    }
+                },
+                {
+                    "text": "RT @MasinElije: I don\u2019t feel bad for Khloe Kardashian. Once a man shows you he\u2019s not shit, BELIEVE HIM. I don\u2019t believe in 4, 5, 6 chances\u2026",
+                    "analysis": {
+                        "neg": 0.111,
+                        "neu": 0.796,
+                        "pos": 0.093,
+                        "compound": -0.1471
+                    }
+                },
+                {
+                    "text": "Scott Disick sends Khloe Kardashian flowers as 'cheating' ex Tristan Thompson 'welcomes third baby after steamy affair' https://t.co/am62KQrXMS",
+                    "analysis": {
+                        "neg": 0.161,
+                        "neu": 0.717,
+                        "pos": 0.121,
+                        "compound": -0.2263
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Saddened\u2019 That Tristan Thompson May Have\nCheated On Her For 5 Months   \ud83d\udc49 Promote With Us \ud83d\udc49 https://t.co/hJ8nDOwrbZ \nhttps://t.co/dFuSDEhAzc",
+                    "analysis": {
+                        "neg": 0.107,
+                        "neu": 0.809,
+                        "pos": 0.084,
+                        "compound": -0.1779
+                    }
+                },
+                {
+                    "text": "RT @nyaaathreatt: khloe kardashian post inspiration quotes on her story everyday but won\u2019t find inspiration to leave tristan thompson alone\u2026",
+                    "analysis": {
+                        "neg": 0.052,
+                        "neu": 0.677,
+                        "pos": 0.271,
+                        "compound": 0.7579
+                    }
+                },
+                {
+                    "text": "RT @dulce_twit: @MadameNoire https://t.co/B5tHb20ELK",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 1.0,
+                        "pos": 0.0,
+                        "compound": 0.0
+                    }
+                },
+                {
+                    "text": "RT @MasinElije: I don\u2019t feel bad for Khloe Kardashian. Once a man shows you he\u2019s not shit, BELIEVE HIM. I don\u2019t believe in 4, 5, 6 chances\u2026",
+                    "analysis": {
+                        "neg": 0.111,
+                        "neu": 0.796,
+                        "pos": 0.093,
+                        "compound": -0.1471
+                    }
+                },
+                {
+                    "text": "RT @joshieyamaguchi: I love feeding &amp; spoiling niggas OMGGGG mfs gave me khloe Kardashian\u2019s prayer \ud83d\ude14\ud83d\ude4f\ud83c\udffd",
+                    "analysis": {
+                        "neg": 0.089,
+                        "neu": 0.706,
+                        "pos": 0.204,
+                        "compound": 0.4767
+                    }
+                },
+                {
+                    "text": "RT @Cosmopolitan_es: Tal y como revela una fuente, la empresaria ha pillado al jugador de baloncesto si\u00e9ndole infiel una vez m\u00e1s, y ahora d\u2026",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 0.906,
+                        "pos": 0.094,
+                        "compound": 0.34
+                    }
+                },
+                {
+                    "text": "RT @Joyman007: Someone said this is gonna be Tristan Thompson picking up his son Lol @RealTristan13 @khloekardashian #tristanthomposon #Tri\u2026",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 0.865,
+                        "pos": 0.135,
+                        "compound": 0.4215
+                    }
+                },
+                {
+                    "text": "RT @AlexUlrichh: Khloe Kardashian: \u201ccan you please stop cheating on me and just love me and our daughter?\u201d\n\nTristan Thompson:\nhttps://t.co/\u2026",
+                    "analysis": {
+                        "neg": 0.198,
+                        "neu": 0.58,
+                        "pos": 0.222,
+                        "compound": 0.1779
+                    }
+                },
+                {
+                    "text": "RT @DomDaTrainer: Khloe Kardashian: \u201cWhy do you keep cheating on me?\u201d\n\nTristan Thompson: https://t.co/HchVBXWMBn",
+                    "analysis": {
+                        "neg": 0.217,
+                        "neu": 0.783,
+                        "pos": 0.0,
+                        "compound": -0.5574
+                    }
+                },
+                {
+                    "text": "i feel so bad whenever i look back on how i let dudes treat me like a fool\u2026and then i remember khloe kardashian exists",
+                    "analysis": {
+                        "neg": 0.146,
+                        "neu": 0.684,
+                        "pos": 0.169,
+                        "compound": -0.075
+                    }
+                },
+                {
+                    "text": "RT @joshieyamaguchi: I love feeding &amp; spoiling niggas OMGGGG mfs gave me khloe Kardashian\u2019s prayer \ud83d\ude14\ud83d\ude4f\ud83c\udffd",
+                    "analysis": {
+                        "neg": 0.089,
+                        "neu": 0.706,
+                        "pos": 0.204,
+                        "compound": 0.4767
+                    }
+                },
+                {
+                    "text": "RT @nyaaathreatt: khloe kardashian post inspiration quotes on her story everyday but won\u2019t find inspiration to leave tristan thompson alone\u2026",
+                    "analysis": {
+                        "neg": 0.052,
+                        "neu": 0.677,
+                        "pos": 0.271,
+                        "compound": 0.7579
+                    }
+                },
+                {
+                    "text": "RT @jessysoderbeck: *Tristan Thompson cheats*\n\nKhlo\u00e9 Kardashian: https://t.co/iNFl0kzppT",
+                    "analysis": {
+                        "neg": 0.286,
+                        "neu": 0.714,
+                        "pos": 0.0,
+                        "compound": -0.4215
+                    }
+                },
+                {
+                    "text": "RT @kariemadashaena: tristan thompson couldn\u2019t even stay true to khloe kardashian",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 0.781,
+                        "pos": 0.219,
+                        "compound": 0.4215
+                    }
+                },
+                {
+                    "text": "RT @MasinElije: I don\u2019t feel bad for Khloe Kardashian. Once a man shows you he\u2019s not shit, BELIEVE HIM. I don\u2019t believe in 4, 5, 6 chances\u2026",
+                    "analysis": {
+                        "neg": 0.111,
+                        "neu": 0.796,
+                        "pos": 0.093,
+                        "compound": -0.1471
+                    }
+                },
+                {
+                    "text": "Khlo\u00e9 Kardashian Defended Kylie Jenner And Travis Scott After Their New Magazine Cover Reportedly Claimed They Haven't Been A Couple In \"Two Years\": The reported claims appear to be from Kylie and Travis's interview with W magazine which was shared\u2026 https://t.co/xukqtkJ6A3",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 1.0,
+                        "pos": 0.0,
+                        "compound": 0.0
+                    }
+                },
+                {
+                    "text": "RT @SidleyTwins: Khloe Kardashian being delusional for 2 minutes straight\u2026 #TristanThompson https://t.co/36PLF7Ryr0",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 1.0,
+                        "pos": 0.0,
+                        "compound": 0.0
+                    }
+                },
+                {
+                    "text": "RT @BuzzFeed: The reported claims appear to be from Kylie and Travis\u2019s interview with W magazine which was shared online by fans this weeke\u2026",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 0.906,
+                        "pos": 0.094,
+                        "compound": 0.34
+                    }
+                },
+                {
+                    "text": "Selingkuh Sampai Punya Bayi, Tristan Thompson Eks Khloe Kardashian 'Sogok' Mantan Rp 1 Miliar #KhloeKardashian #TristanThompson https://t.co/AGRn7tnZoR https://t.co/tXUcm07KYC",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 1.0,
+                        "pos": 0.0,
+                        "compound": 0.0
+                    }
+                },
+                {
+                    "text": "Poor Thang: Khlo\u00e9 Kardashian \u201cUpset\u201d To Learn Tristan Cheated AGAIN\u2026 Kardashians Rally In Support Of Both \u201cFamily\u201d Members Amid Scandal https://t.co/PkIjfb22Y2 https://t.co/lTpQuI7AoI",
+                    "analysis": {
+                        "neg": 0.31,
+                        "neu": 0.6,
+                        "pos": 0.09,
+                        "compound": -0.765
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Saddened\u2019 That Tristan Thompson May Have Cheated On Her For 5 Months https://t.co/BP7aIn2Bnh https://t.co/iSN03CUtbt",
+                    "analysis": {
+                        "neg": 0.18,
+                        "neu": 0.82,
+                        "pos": 0.0,
+                        "compound": -0.5106
+                    }
+                },
+                {
+                    "text": "RT @MasinElije: I don\u2019t feel bad for Khloe Kardashian. Once a man shows you he\u2019s not shit, BELIEVE HIM. I don\u2019t believe in 4, 5, 6 chances\u2026",
+                    "analysis": {
+                        "neg": 0.111,
+                        "neu": 0.796,
+                        "pos": 0.093,
+                        "compound": -0.1471
+                    }
+                },
+                {
+                    "text": "RT @Revista_Clase: Khlo\u00e9 Kardashian crey\u00f3 que Tristan Thompson cambiar\u00eda por ella https://t.co/FxcdGq8MjS",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 1.0,
+                        "pos": 0.0,
+                        "compound": 0.0
+                    }
+                },
+                {
+                    "text": "Khlo\u00e9 Kardashian and Tristan Thompson Were Reportedly \u201cStill Together\u201d When He Cheated\u00a0Again https://t.co/YQopK6kCto",
+                    "analysis": {
+                        "neg": 0.202,
+                        "neu": 0.798,
+                        "pos": 0.0,
+                        "compound": -0.5106
+                    }
+                },
+                {
+                    "text": "Lo que fuentes cercanas revelan que siente #KhloeKardashian al enterarse que #TristanThompson engendr\u00f3 un hijo con otra mujer estando en una relaci\u00f3n con ella.\n\nhttps://t.co/b5lB6ATH8v https://t.co/13Su7QRRed",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 1.0,
+                        "pos": 0.0,
+                        "compound": 0.0
+                    }
+                },
+                {
+                    "text": "RT @_veevyan: Khloe Kardashian is 7 years older than Tristan Thompson? that makes the whole relationship look even goofier. have some self-\u2026",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 1.0,
+                        "pos": 0.0,
+                        "compound": 0.0
+                    }
+                },
+                {
+                    "text": "Khlo\u00e9 Kardashian recebe flores de Scott Disick, ex de Kourtney Kardashian https://t.co/rJJj1BvXHz https://t.co/mC9EkntrRG",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 1.0,
+                        "pos": 0.0,
+                        "compound": 0.0
+                    }
+                },
+                {
+                    "text": "#ScottDisick cheers up #KhloeKardashian with pink flowers amid #TristanThompson paternity controversy\nhttps://t.co/oIr7FffDcy",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 0.78,
+                        "pos": 0.22,
+                        "compound": 0.4767
+                    }
+                },
+                {
+                    "text": "RT @MasinElije: I don\u2019t feel bad for Khloe Kardashian. Once a man shows you he\u2019s not shit, BELIEVE HIM. I don\u2019t believe in 4, 5, 6 chances\u2026",
+                    "analysis": {
+                        "neg": 0.111,
+                        "neu": 0.796,
+                        "pos": 0.093,
+                        "compound": -0.1471
+                    }
+                },
+                {
+                    "text": "Khlo\u00e9 Kardashian 'Upset' Over Tristan Thompson's Cheating, 3rd Child: 'They Were Still Together' https://t.co/usjogC5Zw3 Upset N Stupid, does wonders for her skin.",
+                    "analysis": {
+                        "neg": 0.404,
+                        "neu": 0.596,
+                        "pos": 0.0,
+                        "compound": -0.9042
+                    }
+                },
+                {
+                    "text": "disse o mundo pra khloe kardashian https://t.co/mx5Whs11Bu",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 1.0,
+                        "pos": 0.0,
+                        "compound": 0.0
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Saddened\u2019 That Tristan Thompson May Have Cheated On Her For 5\u00a0Months https://t.co/1PxbGAsBwV",
+                    "analysis": {
+                        "neg": 0.191,
+                        "neu": 0.809,
+                        "pos": 0.0,
+                        "compound": -0.5106
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian is \"saddened\" that Tristan Thompson may have cheated on her for 5 months https://t.co/Pf5t2fjAEW https://t.co/22i8sQVpm0",
+                    "analysis": {
+                        "neg": 0.309,
+                        "neu": 0.691,
+                        "pos": 0.0,
+                        "compound": -0.7717
+                    }
+                },
+                {
+                    "text": "Kylie Jenner and Travis Scott \u2018are very much a couple\u2019, reveals Khloe\u00a0Kardashian https://t.co/n0qKOj1M2w",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 1.0,
+                        "pos": 0.0,
+                        "compound": 0.0
+                    }
+                },
+                {
+                    "text": "Why does no one talk about the fact that khloe kardashian lies about her infertility for years to the public and her own husband , regardless of her reasoning and his drug usage. You literally used infertility as a sob story when it\u2019s too many women\u2019s REAL STORY, all because you",
+                    "analysis": {
+                        "neg": 0.127,
+                        "neu": 0.873,
+                        "pos": 0.0,
+                        "compound": -0.7184
+                    }
+                },
+                {
+                    "text": "RT @short_lifts: I may not be rich. I may not be the prettiest. I may not be the smartest. But I am grateful for 2 things in this life: \n\nI\u2026",
+                    "analysis": {
+                        "neg": 0.168,
+                        "neu": 0.721,
+                        "pos": 0.111,
+                        "compound": -0.0183
+                    }
+                },
+                {
+                    "text": "RT @MasinElije: I don\u2019t feel bad for Khloe Kardashian. Once a man shows you he\u2019s not shit, BELIEVE HIM. I don\u2019t believe in 4, 5, 6 chances\u2026",
+                    "analysis": {
+                        "neg": 0.111,
+                        "neu": 0.796,
+                        "pos": 0.093,
+                        "compound": -0.1471
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian receives sympathy flowers from Scott Disick after Tristan Thompson baby drama\n\nhttps://t.co/lOw8gtB3qv https://t.co/hZIaAWo4B8",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 0.848,
+                        "pos": 0.152,
+                        "compound": 0.3612
+                    }
+                },
+                {
+                    "text": "RT @ash_krc: at this point tristan thompson is known only for playing khloe kardashian, not for playing basketball.",
+                    "analysis": {
+                        "neg": 0.082,
+                        "neu": 0.825,
+                        "pos": 0.093,
+                        "compound": 0.0536
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Sad\u2019 Tristan Could Be Cheating For 5 Months \u2013 Hollywood\u00a0Life https://t.co/s5DChBbA5I",
+                    "analysis": {
+                        "neg": 0.217,
+                        "neu": 0.783,
+                        "pos": 0.0,
+                        "compound": -0.5574
+                    }
+                },
+                {
+                    "text": "RT @MasinElije: I don\u2019t feel bad for Khloe Kardashian. Once a man shows you he\u2019s not shit, BELIEVE HIM. I don\u2019t believe in 4, 5, 6 chances\u2026",
+                    "analysis": {
+                        "neg": 0.111,
+                        "neu": 0.796,
+                        "pos": 0.093,
+                        "compound": -0.1471
+                    }
+                },
+                {
+                    "text": "RT @AlexUlrichh: Khloe Kardashian: \u201ccan you please stop cheating on me and just love me and our daughter?\u201d\n\nTristan Thompson:\nhttps://t.co/\u2026",
+                    "analysis": {
+                        "neg": 0.198,
+                        "neu": 0.58,
+                        "pos": 0.222,
+                        "compound": 0.1779
+                    }
+                },
+                {
+                    "text": "@ElImperioUnive1 No tiene nada que ver que eso hace muchos a\u00f1os antes de ser pol\u00edtico que realmente nunca debi\u00f3 serlo, dijo en the aprentice que solo volaba en su avi\u00f3n, y si era un placer culposo para mi ver ese programa creo que fue la temporada con Khloe Kardashian cuando lo dijo",
+                    "analysis": {
+                        "neg": 0.041,
+                        "neu": 0.959,
+                        "pos": 0.0,
+                        "compound": -0.296
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Saddened\u2019 That Tristan Thompson May Have Cheated On Her For 5\u00a0Months https://t.co/Fv1kssbnS6",
+                    "analysis": {
+                        "neg": 0.191,
+                        "neu": 0.809,
+                        "pos": 0.0,
+                        "compound": -0.5106
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Saddened\u2019 That Tristan Thompson May Have Cheated On Her For 5\u00a0Months https://t.co/4LWxDrJkA8",
+                    "analysis": {
+                        "neg": 0.191,
+                        "neu": 0.809,
+                        "pos": 0.0,
+                        "compound": -0.5106
+                    }
+                },
+                {
+                    "text": "RT @joshieyamaguchi: I love feeding &amp; spoiling niggas OMGGGG mfs gave me khloe Kardashian\u2019s prayer \ud83d\ude14\ud83d\ude4f\ud83c\udffd",
+                    "analysis": {
+                        "neg": 0.089,
+                        "neu": 0.706,
+                        "pos": 0.204,
+                        "compound": 0.4767
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Saddened\u2019 Tristan May Have Cheated For 5 Months \u2013 Hollywood\u00a0Life https://t.co/kD5NBDFbgX",
+                    "analysis": {
+                        "neg": 0.202,
+                        "neu": 0.798,
+                        "pos": 0.0,
+                        "compound": -0.5106
+                    }
+                },
+                {
+                    "text": "khloe kardashian can never keep a man",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 1.0,
+                        "pos": 0.0,
+                        "compound": 0.0
+                    }
+                },
+                {
+                    "text": "RT @MasinElije: I don\u2019t feel bad for Khloe Kardashian. Once a man shows you he\u2019s not shit, BELIEVE HIM. I don\u2019t believe in 4, 5, 6 chances\u2026",
+                    "analysis": {
+                        "neg": 0.111,
+                        "neu": 0.796,
+                        "pos": 0.093,
+                        "compound": -0.1471
+                    }
+                },
+                {
+                    "text": "RT @MasinElije: I don\u2019t feel bad for Khloe Kardashian. Once a man shows you he\u2019s not shit, BELIEVE HIM. I don\u2019t believe in 4, 5, 6 chances\u2026",
+                    "analysis": {
+                        "neg": 0.111,
+                        "neu": 0.796,
+                        "pos": 0.093,
+                        "compound": -0.1471
+                    }
+                },
+                {
+                    "text": "RT @afreeennn: everyone\u2019s laughing @ khloe kardashian for having a new face every week what about ariana grande? girl\u2019s gone from white to\u2026",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 0.873,
+                        "pos": 0.127,
+                        "compound": 0.4939
+                    }
+                },
+                {
+                    "text": "\ud83d\udcfa El nuevo esc\u00e1ndalo de Khloe Kardashian: Tristan Thompson embaraz\u00f3 a otra mujer https://t.co/fzMmkJOldC",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 1.0,
+                        "pos": 0.0,
+                        "compound": 0.0
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Saddened\u2019 Tristan May Have Cheated For 5 Months \u2013 Hollywood Life \u2013 Hotness\u00a0Everywhere https://t.co/5z2NKq9mBo",
+                    "analysis": {
+                        "neg": 0.171,
+                        "neu": 0.829,
+                        "pos": 0.0,
+                        "compound": -0.5106
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Saddened\u2019 That Tristan Thompson May Have Cheated On Her For 5\u00a0Months https://t.co/ylmYKvCxjY",
+                    "analysis": {
+                        "neg": 0.191,
+                        "neu": 0.809,
+                        "pos": 0.0,
+                        "compound": -0.5106
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Saddened\u2019 Tristan May Have Cheated For 5 Months \u2013 Hollywood Life \u2013\u00a0ViuHapa https://t.co/IVqOrENHcr",
+                    "analysis": {
+                        "neg": 0.18,
+                        "neu": 0.82,
+                        "pos": 0.0,
+                        "compound": -0.5106
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Saddened\u2019 Tristan May Have Cheated For 5 Months \u2013 Hollywood Life \u2013\u00a0ViuHapa https://t.co/f7d5l950yb",
+                    "analysis": {
+                        "neg": 0.18,
+                        "neu": 0.82,
+                        "pos": 0.0,
+                        "compound": -0.5106
+                    }
+                },
+                {
+                    "text": "kinda sad khloe kardashian hasn\u2019t been quoting us to death, i need more celeb drama in my life",
+                    "analysis": {
+                        "neg": 0.295,
+                        "neu": 0.705,
+                        "pos": 0.0,
+                        "compound": -0.7722
+                    }
+                },
+                {
+                    "text": "Tristan Thompson\u2019s love child scandal has left Khloe Kardashian \u2018insecure\u2019 and family has \u2018never seen her so\u00a0upset\u2019 https://t.co/c4ssAjhF6Y",
+                    "analysis": {
+                        "neg": 0.12,
+                        "neu": 0.705,
+                        "pos": 0.174,
+                        "compound": 0.3182
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Saddened\u2019 Tristan May Have Cheated For 5 Months \u2013 Hollywood\u00a0Life https://t.co/hmcQ6LLxOs",
+                    "analysis": {
+                        "neg": 0.202,
+                        "neu": 0.798,
+                        "pos": 0.0,
+                        "compound": -0.5106
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian termin\u00f3 con Tristan Thompson en junio tras enterarse de nueva infidelidad\n#Tamaulipas #ElMante #Tampico #Victoria #Altamira #Madero #Reynosa #Matamoros #Xicotencatl #NLD  #RioBravo #ValleHermoso #UnidosPorTamaulipas\n\u2b07Enlace\nhttps://t.co/dFOjxlBFPr https://t.co/EzTrb6eHib",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 1.0,
+                        "pos": 0.0,
+                        "compound": 0.0
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Saddened\u2019 Tristan May Have Cheated For 5 Months \u2013 Hollywood\u00a0Life https://t.co/0tAh2yRkbx",
+                    "analysis": {
+                        "neg": 0.202,
+                        "neu": 0.798,
+                        "pos": 0.0,
+                        "compound": -0.5106
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Saddened\u2019 Tristan May Have Cheated For 5 Months \u2013 Hollywood\u00a0Life https://t.co/Dfe3FzCwZI",
+                    "analysis": {
+                        "neg": 0.202,
+                        "neu": 0.798,
+                        "pos": 0.0,
+                        "compound": -0.5106
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Saddened\u2019 That Tristan Thompson May Have Cheated On Her For 5 Months \u2013 Entrendz\u00a0Showbizz https://t.co/pWebz3MBD7",
+                    "analysis": {
+                        "neg": 0.163,
+                        "neu": 0.837,
+                        "pos": 0.0,
+                        "compound": -0.5106
+                    }
+                },
+                {
+                    "text": "Scott Disick Sends Khlo\u00e9 Kardashian Flowers amid Tristan Thompson Baby News: \u2018Love You\u2019 https://t.co/oihztSPSse",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 1.0,
+                        "pos": 0.0,
+                        "compound": 0.0
+                    }
+                },
+                {
+                    "text": "According to court documents obtained by People, the 30-year-old athlete will soon be a father to a baby boy this month. The NBA star will share the child with Maralee Nichols, a personal trainer from Texas, as first reported by the Daily Mail. https://t.co/8DsAS5qYK2",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 0.951,
+                        "pos": 0.049,
+                        "compound": 0.296
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Saddened\u2019 That Tristan Thompson May Have Cheated On Her For 5\u00a0Months https://t.co/CpQuO4HpGU",
+                    "analysis": {
+                        "neg": 0.191,
+                        "neu": 0.809,
+                        "pos": 0.0,
+                        "compound": -0.5106
+                    }
+                },
+                {
+                    "text": "RT @MasinElije: I don\u2019t feel bad for Khloe Kardashian. Once a man shows you he\u2019s not shit, BELIEVE HIM. I don\u2019t believe in 4, 5, 6 chances\u2026",
+                    "analysis": {
+                        "neg": 0.111,
+                        "neu": 0.796,
+                        "pos": 0.093,
+                        "compound": -0.1471
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Saddened\u2019 That Tristan Thompson May Have Cheated On Her For 5\u00a0Months https://t.co/hhPksaNY4l",
+                    "analysis": {
+                        "neg": 0.191,
+                        "neu": 0.809,
+                        "pos": 0.0,
+                        "compound": -0.5106
+                    }
+                },
+                {
+                    "text": "RT @Iamgrooootttttt: There are a lot of Khloe Kardashians laughing at Khloe Kardashian while laid up with a Tristan Thompson\u2026",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 0.856,
+                        "pos": 0.144,
+                        "compound": 0.4939
+                    }
+                },
+                {
+                    "text": "RT @dulce_twit: @MadameNoire https://t.co/B5tHb20ELK",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 1.0,
+                        "pos": 0.0,
+                        "compound": 0.0
+                    }
+                },
+                {
+                    "text": "RT @MasinElije: I don\u2019t feel bad for Khloe Kardashian. Once a man shows you he\u2019s not shit, BELIEVE HIM. I don\u2019t believe in 4, 5, 6 chances\u2026",
+                    "analysis": {
+                        "neg": 0.111,
+                        "neu": 0.796,
+                        "pos": 0.093,
+                        "compound": -0.1471
+                    }
+                },
+                {
+                    "text": "RT @1_d1t: Khloe Kardashian \u2018Saddened\u2019 That Tristan Thompson May Have Cheated On Her For 5 Months https://t.co/cKd6HNN9Yu",
+                    "analysis": {
+                        "neg": 0.171,
+                        "neu": 0.829,
+                        "pos": 0.0,
+                        "compound": -0.5106
+                    }
+                },
+                {
+                    "text": "@_qasimqureshi Khloe kardashian's baby daddy",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 1.0,
+                        "pos": 0.0,
+                        "compound": 0.0
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Saddened\u2019 That Tristan Thompson May Have Cheated On Her For 5 Months: Khloe Kardashian 'will never get back together' with Tristan Thompson after learning that he allegedly fathered a child with Maralee\u2026 https://t.co/dh36CXuXOI #Gossip #StockAlertUsaGossip https://t.co/z98iVgZ42q",
+                    "analysis": {
+                        "neg": 0.122,
+                        "neu": 0.878,
+                        "pos": 0.0,
+                        "compound": -0.6124
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018Saddened\u2019 That Tristan Thompson May Have Cheated On Her For 5 Months https://t.co/cKd6HNN9Yu",
+                    "analysis": {
+                        "neg": 0.191,
+                        "neu": 0.809,
+                        "pos": 0.0,
+                        "compound": -0.5106
+                    }
+                },
+                {
+                    "text": "Scott Disick Sends Khlo\u00e9 Kardashian Flowers amid Tristan Thompson Baby News: 'Love You' (Dory Jackson / People)\n\nhttps://t.co/hxEmcSroh2\nhttps://t.co/H7Nh6v5was",
+                    "analysis": {
+                        "neg": 0.0,
+                        "neu": 0.811,
+                        "pos": 0.189,
+                        "compound": 0.6369
+                    }
+                },
+                {
+                    "text": "RT @MasinElije: I don\u2019t feel bad for Khloe Kardashian. Once a man shows you he\u2019s not shit, BELIEVE HIM. I don\u2019t believe in 4, 5, 6 chances\u2026",
+                    "analysis": {
+                        "neg": 0.111,
+                        "neu": 0.796,
+                        "pos": 0.093,
+                        "compound": -0.1471
+                    }
+                },
+                {
+                    "text": "RT @MasinElije: I don\u2019t feel bad for Khloe Kardashian. Once a man shows you he\u2019s not shit, BELIEVE HIM. I don\u2019t believe in 4, 5, 6 chances\u2026",
+                    "analysis": {
+                        "neg": 0.111,
+                        "neu": 0.796,
+                        "pos": 0.093,
+                        "compound": -0.1471
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018hurt\u2019 Tristan Thompson\u2019s cheating and fatherhood\u00a0drama https://t.co/QPeXgx3CoT",
+                    "analysis": {
+                        "neg": 0.286,
+                        "neu": 0.714,
+                        "pos": 0.0,
+                        "compound": -0.5574
+                    }
+                },
+                {
+                    "text": "Khloe Kardashian \u2018hurt\u2019 Tristan Thompson\u2019s cheating and fatherhood\u00a0drama https://t.co/EQa0S590CR",
+                    "analysis": {
+                        "neg": 0.286,
+                        "neu": 0.714,
+                        "pos": 0.0,
+                        "compound": -0.5574
+                    }
+                },
+                {
+                    "text": "RT @MasinElije: I don\u2019t feel bad for Khloe Kardashian. Once a man shows you he\u2019s not shit, BELIEVE HIM. I don\u2019t believe in 4, 5, 6 chances\u2026",
+                    "analysis": {
+                        "neg": 0.111,
+                        "neu": 0.796,
+                        "pos": 0.093,
+                        "compound": -0.1471
+                    }
+                }
+            ],
+            "avg_score": -0.1484,
+            "overall_sentiment": "negative",
+            "query": "Khloe Kardashian",
+            "size": 100,
+            "timestamp": "2021-12-07 16:08:09.248384"
         }
     ]
 }

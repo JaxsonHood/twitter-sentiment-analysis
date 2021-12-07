@@ -4,7 +4,16 @@ import App from './App.vue'
 import { routes } from './routes.js'
 import { createRouter, createWebHistory } from 'vue-router'
 
-let app = createApp(App)
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faPlay, faStop } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faPlay);
+library.add(faStop);
+
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
+let app = createApp(App).component("font-awesome-icon", FontAwesomeIcon)
+
 let router = createRouter({
   history: createWebHistory(),
   routes: import.meta.hot ? [] : routes,
