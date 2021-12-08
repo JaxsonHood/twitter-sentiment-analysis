@@ -3,11 +3,11 @@
     class="
       border-2
       text-white
-      px-4
-      py-4
+      px-3
+      py-3
       rounded-3xl
       grid grid-cols-8
-      gap-4
+      gap-2
       border-gray-600
       mb-6
     "
@@ -18,10 +18,18 @@
         <div class="font-bold">{{ result.runs[0].query }}</div>
         <div class="text-sm text-gray-500 pt-2">Interval</div>
         <div>{{ result.interval_milliseconds / 1000 }}sec</div>
-        <div class="text-sm text-gray-500 pt-2">Runs</div>
-        <div>{{ result.num_runs }}</div>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <div class="text-sm text-gray-500 pt-2">Runs</div>
+            <div>{{ result.num_runs }}</div>
+          </div>
+          <div>
+            <div class="text-sm text-gray-500 pt-2">Sample #</div>
+            <div>{{ result.runs[0].size }}</div>
+          </div>
+        </div>
         <div class="text-sm text-gray-500 pt-2">Avg. Score</div>
-        <div>{{generateAvg(result)}}</div>
+        <div :class="generateAvg(result) >= 0.05 ? 'text-green-accent-700 font-bold' : generateAvg(result) <= -0.05 ? 'text-red-accent-700 font-bold' : 'text-yellow-accent-700 font-bold'">{{generateAvg(result)}}</div>
         <div class="pt-4 p-1 text-xs text-gray-300">{{result.runs[0].timestamp}}</div>
       </div>
     </div>
@@ -45,7 +53,7 @@ export default {
     };
   },
   mounted() {
-    let lab = [];
+    
   },
   methods: {
     generateAvg(result) {

@@ -34,7 +34,7 @@ def interval():
     uuid = data['uuid']
     interval_milliseconds = data['interval']
     num_runs = data['runs']
-    size = 100
+    size = data['size']
     
     return handle_interval(q, size, uuid, interval_milliseconds, num_runs)
 
