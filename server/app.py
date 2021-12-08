@@ -26,6 +26,18 @@ def analyse():
     size = 100
     return handle_query(q, size)
 
+# sanity check route
+@app.route('/interval_test', methods=['POST'])
+def interval():
+    data = request.get_json()
+    q = data['query']
+    uuid = data['uuid']
+    interval_milliseconds = data['interval']
+    num_runs = data['runs']
+    size = 100
+    
+    return handle_interval(q, size, uuid, interval_milliseconds, num_runs)
+
 @app.route('/saved', methods=['GET'])
 def saved():
     return storage.read_saved()
@@ -46,6 +58,18 @@ def handle_query(q, sample_size):
         # SAVE IT ALL
         data = storage.format_json(tweets, avg_score, overall_sentiment, q, actual_size)
         storage.save_run(data)
+        return data
+    
+def handle_interval(q, sample_size, uuid, interval_milliseconds, num_runs):
+    # DO ANALYSIS
+    tweets, avg_score, overall_sentiment, actual_size = twit_analyzer.get_tweets(query=q, count=sample_size)
+    
+    if (actual_size < 1):
+        return {'data': []}
+    else:
+        # SAVE IT ALL
+        data = storage.format_interval_json(tweets, avg_score, overall_sentiment, q, actual_size, uuid)
+        storage.save_interval_run(data, interval_milliseconds, num_runs)
         return data
     
 

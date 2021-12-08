@@ -23,9 +23,9 @@
                 />
                  <div class="grid grid-cols-2 gap-4">
                    <div>
-                    <label for="name" class="inline-block mb-2 font-bold">Interval (ex. h:m)</label>
+                    <label for="name" class="inline-block mb-2 font-bold">Interval (ex. h:m:s)</label>
                     <input
-                      placeholder="(ex. 00:10)"
+                      placeholder="(ex. 0:0:10)"
                       v-model="interval"
                       required=""
                       type="text"
@@ -45,8 +45,13 @@
                  </div>
                 </div>
                 <div class="grid place-items-center h-full">
-                  <div class="px-8 py-3 border-2 border-gray-500 hover:border-gray-900 hover:bg-green-accent-700 text-green-accent-700 hover:text-black rounded-xl transition-all ease-in-out">
+                  <div v-if="running" class="text-xl font-bold text-gray-400">Completed <span class="pl-1 pr-1 text-2xl text-gray-100 font-extrabold">{{current_run}}/{{num_of_runs}}</span> runs</div>
+                  <div v-if="running" class="text-lg font-bold text-gray-400">Next Run <span class="pl-1 pr-1 text-xl text-gray-100 font-extrabold">{{time_left}}</span> sec..</div>
+                  <div v-if="running == false" class="px-8 py-3 border-2 border-gray-500 hover:border-gray-900 hover:bg-green-accent-700 text-green-accent-700 hover:text-black rounded-xl transition-all ease-in-out cursor-pointer" @click="run_test()">
                     <font-awesome-icon class="text-3xl" icon="play" />
+                  </div>
+                  <div v-if="running" class="px-8 py-3 border-2 border-gray-500 hover:border-gray-900 hover:bg-red-accent-700 text-red-accent-700 hover:text-black rounded-xl transition-all ease-in-out cursor-pointer" @click="stop_run(false)">
+                    <font-awesome-icon class="text-3xl" icon="stop" />
                   </div>
                 </div>
               </form>
@@ -63,7 +68,94 @@ export default {
     base_url: 'http://localhost:5000',
     search_query: '',
     interval: '',
-    num_of_runs: ''
+    num_of_runs: '',
+    current_run: 0,
+    interval_result: null,
+    time_next: 0,
+    time_left: 0,
+    running: false,
+    done: false
   }),
+  methods: {
+    async run_test() {
+      if (this.search_query != '' && this.interval.includes(':') && this.num_of_runs != ''){
+        this.running = true
+
+        const hours = parseInt(this.interval.split(':')[0])
+        const minutes = parseInt(this.interval.split(':')[1])
+        const seconds = parseInt(this.interval.split(':')[2])
+        const total_seconds = (hours * 60 * 60) + (minutes * 60) + seconds
+        const milliseconds = total_seconds * 1000
+        
+        const uuid = Date.now()
+        this.run_loop(milliseconds, this.search_query, parseInt(this.num_of_runs), uuid)
+
+      } else{
+        alert("Please fill out all of the information correctly")
+      }
+    },
+    async run_loop(interval, query, runs, uuid){
+      if (this.running){
+        if (runs == parseInt(this.num_of_runs)){
+          this.do_count_down((interval / 1000))
+          this.run_task(query, uuid, interval, runs)
+          this.run_loop(interval, query, (runs - 1), uuid)
+        } else {
+          setTimeout(async () => {
+            this.do_count_down((interval / 1000))
+            this.run_task(query, uuid, interval, runs)
+            if (runs > 1){
+              this.clear_timeouts()
+              this.run_loop(interval, query, (runs - 1), uuid)
+            } else {
+              this.stop_run(true)
+            }
+          }, interval);
+        }
+      }
+    },
+    do_count_down(seconds){
+      this.time_left = seconds
+      setTimeout(() => {
+        if (seconds > 1){
+          this.do_count_down((seconds - 1))
+        }
+      }, 1000);
+    },
+    clear_timeouts(){
+      var maxId = setTimeout(function() {}, 0);
+      for (var i = 0; i < maxId; i += 1) {
+        clearTimeout(i);
+      }
+    },
+    async run_task(query, uuid, interval, runs){
+      const path = this.base_url + '/interval_test'
+
+      const res = await fetch(path, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          query: query,
+          uuid: uuid,
+          interval: interval,
+          runs: runs
+        }) 
+      });
+
+      const data = await res.json()
+      this.interval_result = data
+      this.current_run = this.current_run + 1
+    },
+    stop_run(isClear) {
+      this.running = false
+      this.done = true
+
+      if (isClear){
+        this.search_query = '',
+        this.interval = '',
+        this.num_of_runs = ''
+      }
+    }
+  }
 }
 </script>

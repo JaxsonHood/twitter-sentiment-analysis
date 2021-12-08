@@ -14,6 +14,25 @@ class Storage(object):
         
         with open(self.filename, "w") as outfile:
             outfile.write(json_object)
+            
+            
+    def save_interval_run(self, data, interval_milliseconds, num_runs):
+        # Get saved data
+        saved = self.read_saved()
+        
+        if (str(data['uuid']) in saved["interval_tests"]): 
+            saved["interval_tests"][str(data['uuid'])]['runs'].append(data)
+        else:
+            saved["interval_tests"][data['uuid']] = {
+                'runs': [data],
+                'interval_milliseconds': interval_milliseconds,
+                'num_runs': num_runs
+            }
+        
+        json_object = json.dumps(saved, indent = 4)
+        
+        with open(self.filename, "w") as outfile:
+            outfile.write(json_object)
         
             
     def read_saved(self):
@@ -39,6 +58,19 @@ class Storage(object):
             "query": q,
             "size": size,
             "timestamp": str(now)
+        }
+    
+    def format_interval_json(self, tweets, avg_score, overall_sentiment, q, size, uuid):
+        now = datetime.today()
+        
+        return {
+            "tweets": tweets,
+            "avg_score": avg_score,
+            "overall_sentiment": overall_sentiment,
+            "query": q,
+            "size": size,
+            "timestamp": str(now),
+            "uuid": uuid
         }
     
     def string_pretty(self, data):
