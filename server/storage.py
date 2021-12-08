@@ -33,6 +33,10 @@ class Storage(object):
         
         with open(self.filename, "w") as outfile:
             outfile.write(json_object)
+            
+    def get_interval_saved(self):
+        saved = self.read_saved()
+        return saved['interval_tests']
         
             
     def read_saved(self):

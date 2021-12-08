@@ -5,7 +5,7 @@
           <div class="grid grid-cols-3 items-center text-center pb-2">
             <router-link to="/" class="text-black font-bold text-2xl px-3 py-2 bg-gray-300 m-3 rounded-3xl hover:bg-gray-200 hover:text-gray-900 transition-all ease-in-out cursor-pointer">Home</router-link>
             <router-link to="/stats" class="text-gray-400 font-bold text-2xl px-3 py-2 bg-black m-3 rounded-3xl hover:text-white transition-all ease-in-out cursor-pointer border-2 border-gray-800 hover:border-gray-400">Stats</router-link>
-             <router-link to='tests' class="text-gray-400 font-bold text-2xl px-3 py-2 bg-black m-3 rounded-3xl hover:text-white transition-all ease-in-out cursor-pointer border-2 border-gray-800 hover:border-gray-400">Testing</router-link>
+             <router-link to='tests' class="text-gray-400 font-bold text-2xl px-3 py-2 bg-black m-3 rounded-3xl hover:text-white transition-all ease-in-out cursor-pointer border-2 border-gray-800 hover:border-gray-400">Tester</router-link>
           </div>
           <div class="w-full h-2 bg-gray-400 rounded-xl mb-14 mt-2"></div>
           <div class="grid place-items-center h-full">

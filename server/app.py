@@ -42,6 +42,10 @@ def interval():
 def saved():
     return storage.read_saved()
 
+@app.route('/interval_saved', methods=['GET'])
+def interval_saved():
+    return storage.get_interval_saved()
+
 @app.route('/find', methods=['POST'])
 def find():
     data = request.get_json()

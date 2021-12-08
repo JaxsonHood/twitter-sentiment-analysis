@@ -5,7 +5,7 @@
           <div class="grid grid-cols-3 items-center text-center pb-2">
             <router-link to="/" class="text-gray-400 font-bold text-2xl px-3 py-2 bg-black m-3 rounded-3xl hover:text-white transition-all ease-in-out cursor-pointer border-2 border-gray-800 hover:border-gray-400 ">Home</router-link>
             <router-link to="/stats" class="text-gray-400 font-bold text-2xl px-3 py-2 bg-black m-3 rounded-3xl hover:text-white transition-all ease-in-out cursor-pointer border-2 border-gray-800 hover:border-gray-400">Stats</router-link>
-             <router-link to='tests' class="text-black font-bold text-2xl px-3 py-2 bg-gray-300 m-3 rounded-3xl hover:bg-gray-200 hover:text-gray-900 transition-all ease-in-out cursor-pointer">Testing</router-link>
+             <router-link to='tests' class="text-black font-bold text-2xl px-3 py-2 bg-gray-300 m-3 rounded-3xl hover:bg-gray-200 hover:text-gray-900 transition-all ease-in-out cursor-pointer">Tester</router-link>
           </div>
           <div class="w-full h-2 bg-gray-400 rounded-xl mb-12 mt-2"></div>
           <div class="text-3xl font-extrabold text-gray-200 p-2 mb-2">New Test:</div>
@@ -57,13 +57,22 @@
               </form>
             </div>
           </div>
+          <div class="text-3xl font-extrabold text-gray-200 p-2 mb-2 pt-10">Previous Results:</div>
+          <div class="grid grid-cols-1 p-2">
+            <div v-for="result in previous_tests" :key="result.runs[0].timestamp">
+              <PreviousResults :result="result" />
+            </div>
+          </div>
         </div>
       </div>
   </div>
 </template>
 
 <script>
+import PreviousResults from './components/PreviousResults.vue'
+
 export default {
+  components: { PreviousResults },
   data: () => ({
     base_url: 'http://localhost:5000',
     search_query: '',
@@ -74,9 +83,21 @@ export default {
     time_next: 0,
     time_left: 0,
     running: false,
-    done: false
+    done: false,
+    previous_tests: {},
   }),
+  created: async function() {
+    await this.get_data()
+  },
   methods: {
+    async get_data(){
+      const path = this.base_url + '/interval_saved'
+
+      const res = await fetch(path, {method: 'GET',});
+      const data = await res.json()
+
+      this.previous_tests = data
+    },
     async run_test() {
       if (this.search_query != '' && this.interval.includes(':') && this.num_of_runs != ''){
         this.running = true
@@ -102,10 +123,10 @@ export default {
           this.run_loop(interval, query, (runs - 1), uuid)
         } else {
           setTimeout(async () => {
+            this.clear_timeouts()
             this.do_count_down((interval / 1000))
             this.run_task(query, uuid, interval, runs)
             if (runs > 1){
-              this.clear_timeouts()
               this.run_loop(interval, query, (runs - 1), uuid)
             } else {
               this.stop_run(true)
@@ -145,6 +166,7 @@ export default {
       const data = await res.json()
       this.interval_result = data
       this.current_run = this.current_run + 1
+      await this.get_data()
     },
     stop_run(isClear) {
       this.running = false
