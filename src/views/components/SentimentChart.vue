@@ -68,9 +68,9 @@ export default {
                     beginAtZero: false,
                     responsive: true,
                     mainAspectRatio: false,
-                    callback: (v) => !!~[-0.5, 0.05, 0.5].indexOf(v) ? v : '',
-                    min: -0.5,
-                    max: 0.5,
+                    callback: (v) => !!~[-0.75, 0.05, 0.75].indexOf(v) ? v : '',
+                    min: -0.75,
+                    max: 0.75,
                     step: 0.1
                 }
             }],
