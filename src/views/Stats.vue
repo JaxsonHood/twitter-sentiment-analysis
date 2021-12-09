@@ -7,7 +7,7 @@
             <router-link to="/stats" class="text-black font-bold text-2xl px-3 py-2 bg-gray-100 m-3 rounded-3xl hover:bg-gray-200 hover:text-gray-900 transition-all ease-in-out cursor-pointer">Stats</router-link>
              <router-link to='tests' class="text-gray-400 font-bold text-2xl px-3 py-2 bg-black m-3 rounded-3xl hover:text-white transition-all ease-in-out cursor-pointer border-2 border-gray-800 hover:border-gray-400">Tester</router-link>
           </div>
-          <div class="w-full h-2 bg-gray-400 rounded-xl mb-12 mt-2 mb-10"></div>
+          <div class="w-full h-2 bg-gray-400 rounded-xl mb-8 mt-2"></div>
           <div class="text-white font-bold p-1">
             <div class="font-semibold text-gray-400">Filter By Query:</div>
             <div class="flex flex-wrap pt-3 pb-4 text-xl">
